@@ -28,6 +28,16 @@ public class Passbookcntrl {
    public List<UserPassbookDTO> getDetail1() {
 	   return service.getDetail();
    }
+
+	 @GetMapping("/puser/{rid}")
+   public List<UserPassbookDTO> getUserPassbookDetailBId(@PathVariable("rid") int rid){
+	   return service.getUserPassbookDetailById(rid);
+   }
+   
+   @GetMapping("/user/{rid}")
+   public List<UserPassbookDTO> getUserPassbookDetailById(@PathVariable("rid") int rid){
+	   return service.getUserPassbookDetailById(rid);
+   }
    
    @GetMapping("/ttl")
    public Map<String, Object> getSummary() {
