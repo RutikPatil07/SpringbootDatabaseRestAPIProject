@@ -13,8 +13,10 @@ public class PassbookService {
    private Passbookrepo pprepo;
    
    public List<UserPassbookDTO> getDetail(){
-	   return pprepo.getUserPassbookDetail();
-	   
-	   
+	   return pprepo.getUserPassbookDetail();	   	   
+   }
+
+	public List<UserPassbookDTO> getUserPassbookDetailBId(int rid){
+	   return pprepo.getUserPassbookDetailById(rid);
    }
 }
